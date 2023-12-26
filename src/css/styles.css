@@ -5,14 +5,14 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+/* @import 'normalize.css'; */
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  font-style: normal;
 
   color: #242424;
   background-color: rgba(255, 255, 255, 0.87);
@@ -22,4 +22,93 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+/* ============================Timer============================= */
+.container-timer {
+  width: 1440px;
+  height: 496px;
+  padding: 36px 929px 316px 156px;
+}
+
+.container-timer input {
+  background: #fff;
+  width: 272px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+
+  box-sizing: border-box;
+  padding-left: 16px;
+  font-family: Montserrat, sans-serif;
+  color: #2e2f42;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin-bottom: 32px;
+}
+
+.container-timer button {
+  display: inline-flex;
+  height: 40px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #cfcfcf;
+
+  color: #989898;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+.container-timer button:enabled {
+  background: #4e75ff;
+  color: white;
+}
+
+.timer {
+  display: flex;
+  gap: 24px;
+}
+
+.timer .field {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer .value {
+  color: #2e2f42;
+  /* font-family: Montserrat; */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+
+.timer .label {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+[data-days],
+[data-hours],
+[data-minutes],
+[data-seconds] {
+  width: 55px;
+  display: inline-block;
+  text-align: center;
 }
