@@ -78,8 +78,17 @@ const options = {
     userSelectedDate = selectedDates[0];
     if (userSelectedDate.getTime() < Date.now()) {
       iziToast.warning({
-        title: 'Warning',
-        message: 'Please choose a date in the future',
+        title: 'Error',
+        message: 'Illegal operation',
+        position: 'topRight',
+        backgroundColor: '#EF4040',
+        titleColor: '#FFFFFF',
+        messageColor: '#FFFFFF',
+        progressBarColor: '#FFBEBE',
+        color: '#FFFFFF',
+        colorIcon: '#FFFFFF',
+        icon: 'my-icon',
+        close: true,
       });
       startButton.disabled = true;
     } else {
