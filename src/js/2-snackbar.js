@@ -41,4 +41,5 @@ form.addEventListener('submit', event => {
         theme: 'dark',
       });
     });
+  event.target.elements.delay.value = '';
 });
